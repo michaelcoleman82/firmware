@@ -13,13 +13,10 @@
 The purpose of this simulation is to understand the current flow of the product. In this example, the sheets are modeled by the two SPST switches, the 3v3 logic is pin 1 on the Pi. To the right of the switched are pulldown resistor configurations that is set up *internally* by the Pi.  The leds and the AND gate make up a simple representation of the sheet state and are **not** actual discreet components.  **No**  extra discreet component are needed for this product.
 
 ## Schematic
-![](https://i.gyazo.com/f9d2cb3a270d6f205a57410734f604e4.png)
+![](https://i.gyazo.com/1bff751de9968f71f67f46dd702b3a3a.png)
 *Click **[here](https://workspace.circuitmaker.com/Projects/Details/Joe-Narvaez/ebwu)** to modify the schematic*
 
 The Pi connector and the 4 button connectors are built per spec. Together these components make up the harness for easy setup of product. The schematic is to simply show all the connection and to introduce professional design software into the productm there are **no** PCB footprints.  Note that on pin 1 of the Pi Connector (J2), there is node that splits the voltage. Physically, this occurs inside the connector. The two wires were crimped into the same housing.
-
-
-## Bill of Materials
 
 
 # Firmware
