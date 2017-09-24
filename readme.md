@@ -15,7 +15,7 @@
 - To the right of the switches are pulldown resistor configurations that is set up *internally* by the Pi.  
 - The leds and the AND gate make up a simple representation of the sheet state and are **not** actual discreet components.  
 
-**Note:**  No extra discreet component are needed at this stage.
+**Note:**  No discreet component are needed at this stage.
 
 ## Schematic
 ![](https://i.gyazo.com/1bff751de9968f71f67f46dd702b3a3a.png)
