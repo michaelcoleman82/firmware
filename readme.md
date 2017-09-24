@@ -16,7 +16,7 @@ The purpose of this simulation is to understand the current flow of the product.
 ![](https://i.gyazo.com/1bff751de9968f71f67f46dd702b3a3a.png)
 *Click **[here](https://workspace.circuitmaker.com/Projects/Details/Joe-Narvaez/ebwu)** to modify the schematic*
 
-The Pi connector and the 4 button connectors are built per spec. Together these components make up the harness for easy setup of product. The schematic is to simply show all the connection and to introduce professional design software into the product. There are **no** PCB footprints at this stage.  Note that on pin 1 of the Pi Connector (J2), there is node that splits the voltage. Physically, this occurs inside the connector. The two wires are crimped into the same housing.
+The Pi connector and the 4 button connectors are built per spec. Together these components make up the harness for easy setup of product. The schematic is to simply show all the connection and to introduce professional design software into the product. There are **no** PCB footprints at this stage.  Note that on pin 1 of the Pi Connector (J2), there is a node that splits the voltage. Physically, this occurs inside the connector. The two wires are crimped into the same housing.
 
 
 # Firmware
