@@ -1,0 +1,5 @@
+Comment,Description,Designator,Footprint,LibRef,Quantity
+
+"Raspberry Pi 2 Headers","Raspberry Pi 2","J1","","CMP-mgln2i9j9qi02fyepybh-1","1"
+"Pi Connector","Plug; wire-board; female; PIN: 3; w/o terminals; 2.5mm; for cable","J2","","CMP-1b59d2577c66c49e-8","1"
+"Button Connector","Metal  Button Connector","J3, J4, J5, J6","","CMP-cr5ncra6jj4sfh1kbt2y-1","4"
