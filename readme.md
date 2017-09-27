@@ -81,7 +81,7 @@
 
 8. On the other end of the ribbon pull apart each the wire about 4 inches.  Strip off about 2 inches of insulation. Twist until its very tight. Loop and wrap it around any hole on the male button. hold the wrap and twist until tight.  Do this four times.
 
-  ![](https://i.imgur.com/OtoWK43.jpg)
+  ![](https://i.imgur.com/OcWUHeq.jpg)
 
 9. Make sure all the connections line up
 
