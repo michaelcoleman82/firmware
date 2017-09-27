@@ -1,4 +1,4 @@
-# Hardware
+# EBWU Hardware and Firmware
 
 ## Prerequisites
 - [CircuitMaker](https://documentation.circuitmaker.com/display/CMAK/Exploring+CircuitMaker)
@@ -10,16 +10,22 @@
 *Click **[here](http://everycircuit.com/circuit/6401615620997120)** to modify the simulation*
 
 
-The purpose of this simulation is to understand the current flow of the product. In this example, the sheets are modeled by the two SPST switches, the 3v3 logic is pin 1 on the Pi. To the right of the switched are pulldown resistor configurations that is set up *internally* by the Pi.  The leds and the AND gate make up a simple representation of the sheet state and are **not** actual discreet components.  **No**  extra discreet component are needed for this product.
+- The sheet is modeled by the two SPST switches and the 3v3 logic are pin 1 on the Pi.
+
+- To the right of the switches are pulldown resistor configurations that is set up *internally* by the Pi.  
+- The leds and the AND gate make up a simple representation of the sheet state and are **not** actual discreet components.  
+
+**Note:**  No discreet component are needed at this stage.
 
 ## Schematic
-![](https://i.gyazo.com/f9d2cb3a270d6f205a57410734f604e4.png)
+![](https://i.gyazo.com/1bff751de9968f71f67f46dd702b3a3a.png)
 *Click **[here](https://workspace.circuitmaker.com/Projects/Details/Joe-Narvaez/ebwu)** to modify the schematic*
 
-The Pi connector and the 4 button connectors are built per spec. Together these components make up the harness for easy setup of product. The schematic is to simply show all the connection and to introduce professional design software into the productm there are **no** PCB footprints.  Note that on pin 1 of the Pi Connector (J2), there is node that splits the voltage. Physically, this occurs inside the connector. The two wires were crimped into the same housing.
+- The Pi connector and the 4 button connectors are built per spec. Together these components make up the harness for easy setup of product.
 
+- The schematic is to simply show all the connection and to introduce professional design software into the product. There are **no** PCB footprints at this stage.  
 
-## Bill of Materials
+**Note:** That on pin 1 of the Pi Connector (J2), there is a node that splits the voltage. Physically, this occurs inside the connector. The two wires are crimped into the same housing.
 
 
 # Firmware
