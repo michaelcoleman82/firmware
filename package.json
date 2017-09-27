@@ -1,0 +1,5 @@
+{
+  "scripts":{
+    "copy": "scp index.js pi@192.168.200.64:~/test"
+  }
+}
