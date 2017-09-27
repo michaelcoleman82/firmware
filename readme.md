@@ -43,7 +43,7 @@
  ![](https://i.imgur.com/egDGo70.jpg)
 
 #### Materials
-- [4 Ribbon Cable](http://a.co/e49JKGi)
+- [Ribbon Cable](http://a.co/e49JKGi)
 
 - [3 JST pin housings](http://a.co/8123Xy4) (However, you may need more in case of bad crimps.)
 
@@ -51,7 +51,7 @@
 
 ![](https://i.imgur.com/81Xt63i.jpg)
 #### Steps
-1. You need **4** wire  ribbon that is approximately **25-30 inches** in length. Peel and cut until you have the length and number of wires. DO NOT peel apart individual wires. When you cut make sure its 90° to the wire. All wires need to be the **exact length** to fit into the housing properly. Color doesn't matter. You should have about 30 inches of ribbon that is together like so:
+1. You need **4** wire  ribbon that is approximately **25-30 inches** in length. Peel and cut until you have the length and number of wires. DO NOT peel apart individual wires. When you cut make sure its 90° to the wire. All wires need to be the **exact length** to fit into the housing properly. Color doesn't matter. You should have about 30 inches of ribbon that is together, like so:
 
   ![](https://i.imgur.com/ODABN1Z.jpg)
 
@@ -59,7 +59,7 @@
 
   ![](https://i.imgur.com/AEI57sp.jpg)
 
-3. You need two crimp the two single wires(brown and red here) into one housing and the couple into into one housing. Strip about out 1/8 of a inch. keeping the couple together. Then twist the couple.
+3. You need two crimp the two single wires(brown and red here) into one housing and the couple into into one housing. Strip about out 1/8 of a inch, keeping the couple together. Then twist the couple.
 
   ![](https://i.imgur.com/w0xTqft.jpg)
 
@@ -71,7 +71,7 @@
 
   ![](http://techmattmillman.s3.amazonaws.com/wp-content/uploads/2015/06/phcrimped.jpg)
 
-6. Lastly push your 3 crimps into the JST connector, making sure you put the couple on the left making sure the your putting the housing [pin](https://i.gyazo.com/2ec7647abea16c5264b9a2ddd9c1c047.png) on the correct side so it latches on. See the photo  below for reference. We don't want to risk the exposed latches touching the other pins. Use the Dupont pin to push it in until you hear a snap.
+6. Lastly push your 3 crimps into the JST connector, making sure you put the couple on the left side of the housing [pin](https://i.gyazo.com/2ec7647abea16c5264b9a2ddd9c1c047.png) so the correct side latches on.  See the photo  below for reference. We don't want to risk the exposed latches touching the other pins. Use the Dupont pin to push it in until you hear a snap.
 
   ![](https://i.imgur.com/3t5m7od.jpg)
 
@@ -79,7 +79,7 @@
 
   ![](https://i.imgur.com/9mUZBV3.jpg)
 
-8. On the other end of the ribbon pull apart each the wire about 4 inches.  Strip off about 2 inches of insulation. Twist until its very tight. Loop and wrap it around any hole on the male button. hold the wrap and twist until tight.  Do this four times.
+8. On the other end of the ribbon pull apart each the wire about 4 inches.  Strip off about 2 inches of insulation.  Loop and wrap it around any hole on the male button. Hold the wrap and twist until tight.  Do this all four buttons.
 
   ![](https://i.imgur.com/OcWUHeq.jpg)
 
@@ -87,7 +87,7 @@
 
   ![](https://i.imgur.com/xpAGCi9.jpg)
 
-10. Test connections against firmware
+10. Test connections against firmware(see below)
 
 10. Lastly Solder the button joints.
 
