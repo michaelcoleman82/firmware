@@ -1,6 +1,6 @@
 //imports
 const Gpio = require('pigpio').Gpio
-const {writeFileSync, readFileSync, appendFileSync} = require('fs')
+const {writeFileSync, readFileSync} = require('fs')
 
 
 // constants
