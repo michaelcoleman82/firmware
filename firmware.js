@@ -25,23 +25,8 @@ const sideB = new Gpio(9, {
 writeFileSync( 'stateA',sideA.digitalRead(), 'utf8' )
 writeFileSync( 'stateB',sideB.digitalRead(), 'utf8' )
 
-// helper
-const debounce = (func, wait, immediate) => {
-  var timeout;
-  return function() {
-    var context = this, args = arguments;
-    var later = function() {
-      timeout = null;
-      if (!immediate) func.apply(context, args);
-    };
-    var callNow = immediate && !timeout;
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-    if (callNow) func.apply(context, args);
-  };
-};
 
-
+ 
 
 // helper
 const debounce = (func, wait, immediate) => {
