@@ -1,6 +1,11 @@
 {
   "scripts": {
-    "copy": "scp index.js pi@192.168.200.64:~/test"
+    "copy": "scp firmware.js pi@192.168.200.64:~/firmware",
+    "start": "node firmware.js",
+    "create-cert": "AWS_PROFILE=ebwu aws iot create-keys-and-certificate --set-as-active --certificate-pem-outfile certs/ebwu.pem.crt --public-key-outfile certs/ebwu-public.pem.key --private-key-outfile certs/ebwu-private.pem.key ",
+    "list-certs": "AWS_PROFILE=ebwu aws iot list-certificates",
+    "delete-cert": "AWS_PROFILE=ebwu aws iot delete-certificate --certificate-id $id",
+    "push": "git add -A && git commit -m \"$msg\" && git push"
   },
   "dependencies": {
     "aws-iot-device-sdk": "^2.0.1",

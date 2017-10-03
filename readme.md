@@ -94,3 +94,9 @@
 10. Lastly Solder the button joints.
 
 # Firmware
+
+### Scratch
+1. Register Thing using serverless (cloud)
+2. Generate cert and keys using cli (firmware)
+3. Attach principal  cli (firmware)
+4. 

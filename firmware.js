@@ -3,6 +3,8 @@ const {Gpio} = require('pigpio')
 const {writeFileSync, readFileSync} = require('fs')
 
 
+
+
 // constants
 const SENSITIVITY = 625
 
@@ -26,7 +28,6 @@ writeFileSync( 'stateA',sideA.digitalRead(), 'utf8' )
 writeFileSync( 'stateB',sideB.digitalRead(), 'utf8' )
 
 
-console.log(readFileSync('stateA', 'utf8'),readFileSync('stateB', 'utf8') )
 
 // helper
 const debounce = (func, wait, immediate) => {
