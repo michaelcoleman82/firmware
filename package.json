@@ -1,5 +1,9 @@
 {
-  "scripts":{
+  "scripts": {
     "copy": "scp index.js pi@192.168.200.64:~/test"
+  },
+  "dependencies": {
+    "aws-iot-device-sdk": "^2.0.1",
+    "pigpio": "^0.6.2"
   }
 }

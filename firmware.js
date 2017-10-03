@@ -1,5 +1,5 @@
 //imports
-const Gpio = require('pigpio').Gpio
+const {Gpio} = require('pigpio')
 const {writeFileSync, readFileSync} = require('fs')
 
 
@@ -26,7 +26,7 @@ writeFileSync( 'stateA',sideA.digitalRead(), 'utf8' )
 writeFileSync( 'stateB',sideB.digitalRead(), 'utf8' )
 
 
- 
+console.log(readFileSync('stateA', 'utf8'),readFileSync('stateB', 'utf8') )
 
 // helper
 const debounce = (func, wait, immediate) => {
@@ -49,8 +49,8 @@ const debounce = (func, wait, immediate) => {
 sideA.on('interrupt', debounce( (level) =>{
 
   writeFileSync( 'stateA',level, 'utf8' )
-  stateA = readFileSync('stateA', 'utf8')
-  stateB = readFileSync('stateB', 'utf8')
+  const stateA = readFileSync('stateA', 'utf8')
+  const stateB = readFileSync('stateB', 'utf8')
   sendMessage(stateA, stateB)
 
 },SENSITIVITY))
@@ -58,8 +58,8 @@ sideA.on('interrupt', debounce( (level) =>{
 //sideB listener
 sideB.on('interrupt', debounce( (level) => {
   writeFileSync( 'stateB',level, 'utf8' )
-  stateA = readFileSync('stateA', 'utf8')
-  stateB = readFileSync('stateB', 'utf8')
+  const stateA = readFileSync('stateA', 'utf8')
+  const stateB = readFileSync('stateB', 'utf8')
   sendMessage(stateA, stateB)
 
 }, SENSITIVITY))
