@@ -97,9 +97,9 @@
 10. Lastly Solder the button joints.
 
 # Firmware
-0. ** Run** `npm install` To install dependencies
+0. **Run** `npm install` To install dependencies
 
-1. ** Setup:** `npm run get-certs` This gets all the certs needed for connecting to IoT service. You should have a now have a directory  called 'certs'. Please do not push these to github.
+1. **Setup:** `npm run get-certs` This gets all the certs needed for connecting to IoT service. You should have a now have a directory  called 'certs'. Please do not push these to github.
 
 2. **Create Resources:**
   1. `npm run list-certs`  This lists your certs. Grab the `certificateArn` value  and create a `cloud-configs/vars.yml` file. And paste in your `certificateArn` .It should look somthing like this.
