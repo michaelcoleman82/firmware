@@ -7,6 +7,8 @@
 - [`pigpio` Library](https://github.com/fivdi/pigpio)
 - [aws cli](http://docs.aws.amazon.com/cli/latest/reference/iot/index.html)
 - [aws iot sdk js](https://github.com/aws/aws-iot-device-sdk-js)
+- [Serverless with AWS](https://serverless.com/framework/docs/providers/aws/)
+- [Cloud Formation Types](docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)
 
 # Hardware
 ## Simulation
