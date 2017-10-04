@@ -88,7 +88,10 @@ pi.on('connect', ()=> {
 
 
 // eror handling
-pi.on('error', (error) =>console.log('connection error', error))
+pi.on('error', (error) =>{
+  console.log('connection error', error)
+  led.digitalWrite(0)
+})
 process.on('exit', cleanUp)
 //catches ctrl+c event
 process.on('SIGINT', cleanUp)
