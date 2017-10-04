@@ -38,9 +38,9 @@ const debounce = (fn, wait, immediate) =>{
       timeout=null
       if(!timeout) fn.apply(context, args)
     }
-clearTimeout(timeout)
-timeout = setTimeout(later, wait)
-if (immediate && !timeout) fn.apply(context, args)
+    clearTimeout(timeout)
+    timeout = setTimeout(later, wait)
+    if (immediate && !timeout) fn.apply(context, args)
   }
 }
 const cleanUp = (err)=>{
