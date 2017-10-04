@@ -105,7 +105,6 @@
     1. `npm run list-certs`  This lists your certs. Grab the `certificateArn` value  and create a `cloud-configs/vars.yml` file. And paste in your `certificateArn` .It should look somthing like this.
 
       ```yml
-      # vars.yml
       CertificateARN: arn:aws:iot:us-east-1:1233456789:cert/dfsjkhdsfahjkdfshjur43hi43iewjkknj44knj3kjn43
       ```
 
