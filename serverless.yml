@@ -1,4 +1,4 @@
-service: firmware
+service: device
 
 provider:
   name: aws
@@ -10,8 +10,28 @@ custom:
 
 resources:
   Resources:
-    # IoT
-    Pi: ${file(cloud-configs/iot.yml):Pi}
-    PiAttachment: ${file(cloud-configs/iot.yml):PiAttachment}
-    PiPolicy: ${file(cloud-configs/iot.yml):PiPolicy}
-    PiPolicyAttachment: ${file(cloud-configs/iot.yml):PiPolicyAttachment}
+    Pi:
+      Type: AWS::IoT::Thing
+      Properties:
+        ThingName: pi_mvp
+    PiAttachment:
+      Type: AWS::IoT::ThingPrincipalAttachment
+      Properties:
+        Principal: ${self:custom.vars.CertificateARN}
+        ThingName:
+          Ref: Pi
+    PiPolicy:
+      Type: AWS::IoT::Policy
+      Properties:
+        PolicyDocument:
+          Version: '2012-10-17'
+          Statement:
+          - Action: iot:*
+            Effect: Allow
+            Resource: "*"
+    PiPolicyAttachment:
+      Type: AWS::IoT::PolicyPrincipalAttachment
+      Properties:
+        PolicyName:
+          Ref: PiPolicy
+        Principal: ${self:custom.vars.CertificateARN}
