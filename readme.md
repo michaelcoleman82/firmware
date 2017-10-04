@@ -102,14 +102,14 @@
 1. **Setup:** `npm run get-certs` This gets all the certs needed for connecting to IoT service. You should have a now have a directory  called 'certs'. Please do not push these to github.
 
 2. **Create Resources:**
-  1. `npm run list-certs`  This lists your certs. Grab the `certificateArn` value  and create a `cloud-configs/vars.yml` file. And paste in your `certificateArn` .It should look somthing like this.
+    1. `npm run list-certs`  This lists your certs. Grab the `certificateArn` value  and create a `cloud-configs/vars.yml` file. And paste in your `certificateArn` .It should look somthing like this.
 
-    ```yml
-    # vars.yml
-    CertificateARN: arn:aws:iot:us-east-1:1233456789:cert/dfsjkhdsfahjkdfshjur43hi43iewjkknj44knj3kjn43
-    ```
+      ```yml
+      # vars.yml
+      CertificateARN: arn:aws:iot:us-east-1:1233456789:cert/dfsjkhdsfahjkdfshjur43hi43iewjkknj44knj3kjn43
+      ```
 
-  2. `sls deploy` This creates all the resources in the cloud. Make sure you have you aws credentials configured correctly to deploy the product account. This process takes a few minutes.z
+    2. `sls deploy` This creates all the resources in the cloud. Make sure you have you aws credentials configured correctly to deploy the product account. This process takes a few minutes.z
 
 3. **Run:** `npm start` This runs the code. It should log out connected or an error. If you open the file you'll see there are 6 sections:
 
