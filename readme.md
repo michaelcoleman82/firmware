@@ -115,7 +115,7 @@
 
     1. `imports` Here are your dependencies for the file
 
-    2. `constants`  the `SENSITIVITY` constant fine tunes how often the function fires because the sheet is essentially a volatile switch. It uses a standard [debounce](http://whatis.techtarget.com/definition/debouncing) helper function.
+    2. `constants`  the `SENSITIVITY` constant fine tunes how often the function fires because the sheet is essentially a volatile switch. It used in a standard [debounce](http://whatis.techtarget.com/definition/debouncing) helper function.
 
     2. `configurations`  Sets up the pins and iot device with the correct options. Run `npm run get-endpoint` to get the host value.
 
