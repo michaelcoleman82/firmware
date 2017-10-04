@@ -1,9 +1,9 @@
-service: ebwu
+service: firmware
 
 provider:
   name: aws
   runtime: nodejs6.10
-  profile: ${self:service}
+  profile: ebwu
 
 custom:
   vars: ${file(cloud-configs/vars.yml)}
