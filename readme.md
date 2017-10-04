@@ -74,7 +74,7 @@
 
 5. You need finished and secure crimps that look something like this:   
 
-  ![](https://i.imgur.com/DWoFlBQ.jpg)
+  ![](https://i.imgur.com/4KHoBAn.jpg)
 
 6. Lastly push your 3 crimps into the JST connector, making sure you put the couple on the left side of the housing [pin](https://i.gyazo.com/2ec7647abea16c5264b9a2ddd9c1c047.png) so the correct side latches on.  See the photo  below for reference. We don't want to risk the exposed latches touching the other pins. Use the Dupont pin to push it in until you hear a snap.
 
