@@ -124,8 +124,11 @@
 
     5. `main` Here is where the magic happens. 🎉  If the configuration for the device is correct,  it should connect and turn on the LED. There's a function in charge of publishing state to the cloud. That is called when an event happens on either side of the sheet:
 
-    `sideA.on('interrupt', debounce( level =>{`.
+    ```js
 
+    sideA.on('interrupt', debounce( level =>...
+    ```
+    
     Here debounce helps us fine tune the sensitivity.
 
     6. `error handling` The first logs a connection error. The others just turn off the LED for any of those scenarios.
