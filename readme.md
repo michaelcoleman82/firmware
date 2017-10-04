@@ -117,7 +117,7 @@
 
     2. `constants`  the `SENSITIVITY` constant fine tunes how often the function fires because the sheet is essentially a volatile switch. It used in a standard [debounce](http://whatis.techtarget.com/definition/debouncing) helper function.
 
-    2. `configurations`  Sets up the pins and iot device with the correct options. Run `npm run get-endpoint` to get the host value.
+    2. `configurations`  Sets up the GPIOs and iot device with the correct options. Run `npm run get-endpoint` to get the host value.
 
     3. `helpers` Here are functions that we need to call a few times: `debounce` and `cleanUp`. cleanUp just turns off the LED when the program terminates.
 
