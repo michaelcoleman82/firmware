@@ -109,13 +109,13 @@
     CertificateARN: arn:aws:iot:us-east-1:1233456789:cert/dfsjkhdsfahjkdfshjur43hi43iewjkknj44knj3kjn43
     ```
 
-  2. `sls deploy` This creates all the resources in the cloud. Make sure you have you aws credentials configured correctly. To deploy the product account. This process takes a few minutes.
+  2. `sls deploy` This creates all the resources in the cloud. Make sure you have you aws credentials configured correctly to deploy the product account. This process takes a few minutes.z
 
-3. **Run:** `sudo node  firmware.js` This runs the code. It should log out connected or an error. If you open the file you'll see there are 6 sections:
+3. **Run:** `npm run start` This runs the code. It should log out connected or an error. If you open the file you'll see there are 6 sections:
 
     1. `imports` Here are your dependencies for the file
 
-    2. `constants`  the `SENSITIVITY` constant fine tunes how often the function fires because the sheet is essential a volatile switch. It uses a standard [debounce](http://whatis.techtarget.com/definition/debouncing) helper function.
+    2. `constants`  the `SENSITIVITY` constant fine tunes how often the function fires because the sheet is essentially a volatile switch. It uses a standard [debounce](http://whatis.techtarget.com/definition/debouncing) helper function.
 
     2. `configurations`  Sets up the pins and iot device with the correct options. Run `npm run get-endpoint` to get the host value.
 
@@ -125,7 +125,7 @@
 
     5. `main` Here is where the magic happens. If the configuration for the device is correct,  it should connect and turn on the LED. There's a function in charge of publishing state to the cloud. That is called when an event happens on either side of the sheet:
 
-    `sideA.on('interrupt', debounce( level =>...`
+        `sideA.on('interrupt', debounce( level => ...`
 
     Here debounce helps us fine tune the sensitivity.
 
