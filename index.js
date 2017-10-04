@@ -29,6 +29,7 @@ const pi = device({
   keyPath: './certs/ebwu-private.pem.key',
 })
 
+
 //helpers
 const debounce = (fn, wait, immediate) =>{
   let timeout
@@ -54,8 +55,6 @@ const cleanUp = (err)=>{
 writeFileSync('/sys/class/leds/led0/trigger', 'none','utf8')
 writeFileSync( 'stateA',sideA.digitalRead(), 'utf8' )
 writeFileSync( 'stateB',sideB.digitalRead(), 'utf8' )
-
-
 
 
 
