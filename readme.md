@@ -123,7 +123,7 @@
 
     4. `set initial state` The first write makes sure we have [access to the led](https://raspberrypi.stackexchange.com/questions/697/how-do-i-control-the-system-leds-using-my-software). The other two just create files with the inital state on each side.
 
-    5. `main` Here is where the magic happens. 🎉  If the configuration for the device is correct,  it should connect and turn on the LED. There's a function in charge of publishing state to the cloud. That is called when an event happens on either side of the sheet:
+    5. `main` Here is where the magic happens. If the configuration for the device is correct,  it should connect and turn on the LED. There's a function in charge of publishing state to the cloud. That is called when an event happens on either side of the sheet:
 
     `sideA.on('interrupt', debounce( level =>...`
 
