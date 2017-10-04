@@ -1,4 +1,4 @@
-# EBWU Hardware and Firmware 🤖
+# 🤖 EBWU Hardware and Firmware 
 
 ## Prerequisites
 - [CircuitMaker](https://documentation.circuitmaker.com/display/CMAK/Exploring+CircuitMaker)
