@@ -1,0 +1,17 @@
+service: ebwu
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  profile: ${self:service}
+
+custom:
+  vars: ${file(cloud-configs/vars.yml)}
+
+resources:
+  Resources:
+    # IoT
+    Pi: ${file(cloud-configs/iot.yml):Pi}
+    PiAttachment: ${file(cloud-configs/iot.yml):PiAttachment}
+    PiPolicy: ${file(cloud-configs/iot.yml):PiPolicy}
+    PiPolicyAttachment: ${file(cloud-configs/iot.yml):PiPolicyAttachment}

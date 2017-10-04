@@ -1,14 +1,18 @@
 {
   "scripts": {
     "copy": "scp firmware.js pi@192.168.200.64:~/firmware",
+    "copy-certs": "scp -r certs/* pi@192.168.200.64:~/firmware/certs/",
     "start": "node firmware.js",
-    "create-cert": "AWS_PROFILE=ebwu aws iot create-keys-and-certificate --set-as-active --certificate-pem-outfile certs/ebwu.pem.crt --public-key-outfile certs/ebwu-public.pem.key --private-key-outfile certs/ebwu-private.pem.key ",
+    "get-certs": "AWS_PROFILE=ebwu aws iot create-keys-and-certificate --set-as-active --certificate-pem-outfile certs/ebwu.pem.crt --public-key-outfile certs/ebwu-public.pem.key --private-key-outfile certs/ebwu-private.pem.key && curl -o certs/root-CA.crt https://www.symantec.com/content/en/us/enterprise/verisign/roots/VeriSign-Class%203-Public-Primary-Certification-Authority-G5.pem",
     "list-certs": "AWS_PROFILE=ebwu aws iot list-certificates",
-    "delete-cert": "AWS_PROFILE=ebwu aws iot delete-certificate --certificate-id $id",
+    "delete-cert": "AWS_PROFILE=ebwu aws iot update-certificate --certificate-id $id --new-status INACTIVE && aws iot delete-certificate --certificate-id $id",
+    "register-ca": "AWS_PROFILE=ebwu aws iot register-ca-certificate --set-as-active --ca-certificate \"$ca\" --verification-certificate \"$priv\"",
+    "get-endpoint": "AWS_PROFILE=ebwu aws iot  describe-endpoint",
     "push": "git add -A && git commit -m \"$msg\" && git push"
   },
   "dependencies": {
     "aws-iot-device-sdk": "^2.0.1",
-    "pigpio": "^0.6.2"
+    "pigpio": "^0.6.2",
+    "serverless": "^1.23.0"
   }
 }

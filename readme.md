@@ -5,10 +5,12 @@
 - [Pullup/Pulldown Resistors](https://youtu.be/Bqk6M_XdIC0)
 - [Crimping Dupont Connectors](https://youtu.be/GkbOJSvhCgU)
 - [`pigpio` Library](https://github.com/fivdi/pigpio)
+- [aws cli](http://docs.aws.amazon.com/cli/latest/reference/iot/index.html)
+- [aws iot sdk js](https://github.com/aws/aws-iot-device-sdk-js)
 
 # Hardware
 ## Simulation
-![](https://i.gyazo.com/00d6dbad343b9b41ef1e4e266356a17a.gif)
+![](https://i.gyazo.com/518f230c382b9eb15ae46f08db553f62.gif)
 
 *Click **[here](http://everycircuit.com/circuit/6401615620997120)** to modify the simulation*
 
@@ -71,7 +73,7 @@
 
 5. You need finished and secure crimps that look something like this:   
 
-  ![](http://techmattmillman.s3.amazonaws.com/wp-content/uploads/2015/06/phcrimped.jpg)
+  ![](https://i.imgur.com/DWoFlBQ.jpg)
 
 6. Lastly push your 3 crimps into the JST connector, making sure you put the couple on the left side of the housing [pin](https://i.gyazo.com/2ec7647abea16c5264b9a2ddd9c1c047.png) so the correct side latches on.  See the photo  below for reference. We don't want to risk the exposed latches touching the other pins. Use the Dupont pin to push it in until you hear a snap.
 
@@ -94,9 +96,36 @@
 10. Lastly Solder the button joints.
 
 # Firmware
+0. ** Run `npm install`** To install dependencies
 
-### Scratch
-1. Register Thing using serverless (cloud)
-2. Generate cert and keys using cli (firmware)
-3. Attach principal  cli (firmware)
-4. 
+1. ** Setup:** `npm run get-certs` This gets all the certs needed for connecting to IoT service. You should have a now have a directory  called 'certs'. Please do not push these to github.
+
+2. **Create Resources:**
+  1. `npm run list-certs`  This lists your certs. Grab the `certificateArn` value  and create a `cloud-configs/vars.yml` file. And paste in your `certificateArn` .It should look somthing like this.
+
+    ```yml
+    # vars.yml
+    CertificateARN: arn:aws:iot:us-east-1:1233456789:cert/dfsjkhdsfahjkdfshjur43hi43iewjkknj44knj3kjn43
+    ```
+
+  2. `sls deploy` This creates all the resources in the cloud. Make sure you have you aws credentials configured correctly. To deploy the product account. This process takes a few minutes.
+
+3. **Run:** `sudo node  firmware.js` This runs the code. It should log out connected or an error. If you open the file you'll see there are 6 sections:
+
+    1. `imports` Here are your dependencies for the file
+
+    2. `constants`  the `SENSITIVITY` constant fine tunes how often the function fires because the sheet is essential a volatile switch. It uses a standard [debounce](http://whatis.techtarget.com/definition/debouncing) helper function.
+
+    2. `configurations`  Sets up the pins and iot device with the correct options.
+
+    3. `helpers` Here are functions that we need to call a few times: `debounce` and `cleanUp`. cleanUp just turns off the LED when the program terminates.
+
+    4. `set initial state` The first write makes sure we have [access to the led](https://raspberrypi.stackexchange.com/questions/697/how-do-i-control-the-system-leds-using-my-software). The other two just create files with the inital state on each side.
+
+    5. `main` Here is where the magic happens. 🎉  If the configuration for the device is correct,  it should connect and turn on the LED. There's a function in charge of publishing state to the cloud. That is called when an event happens on either side of the sheet:
+
+    `sideA.on('interrupt', debounce( level =>{`.
+
+    Here debounce helps us fine tune the sensitivity.
+
+    6. `error handling` The first logs a connection error. The others just turn off the LED for any of those scenarios.
