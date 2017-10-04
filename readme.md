@@ -18,7 +18,7 @@
 
 - The sheet is modeled by the two SPST switches and the 3v3 logic corresponds to pin 17 on the Pi.
 
-- To the right of the switches are pulldown resistor configurations that is set up *internally* by the Pi. Pins 19 and 21.  
+- To the right of the switches are pulldown resistor configurations that are set up *internally* by the Pi. Pins 19 and 21.  
 
 - The leds make up a simple representation of the sheet state and are **not** actual discreet components.  
 
