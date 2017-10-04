@@ -97,7 +97,7 @@
 10. Lastly Solder the button joints.
 
 # Firmware
-0. ** Run `npm install`** To install dependencies
+0. ** Run** `npm install` To install dependencies
 
 1. ** Setup:** `npm run get-certs` This gets all the certs needed for connecting to IoT service. You should have a now have a directory  called 'certs'. Please do not push these to github.
 
@@ -111,7 +111,7 @@
 
   2. `sls deploy` This creates all the resources in the cloud. Make sure you have you aws credentials configured correctly to deploy the product account. This process takes a few minutes.z
 
-3. **Run:** `npm run start` This runs the code. It should log out connected or an error. If you open the file you'll see there are 6 sections:
+3. **Run:** `npm start` This runs the code. It should log out connected or an error. If you open the file you'll see there are 6 sections:
 
     1. `imports` Here are your dependencies for the file
 
