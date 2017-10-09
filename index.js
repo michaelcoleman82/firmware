@@ -67,6 +67,7 @@ pi.on('connect', ()=> {
     const publishState = ()=>{
       const stateA = readFileSync('stateA', 'utf8')
       const stateB = readFileSync('stateB', 'utf8')
+      console.log('sheet_state', stateA + stateB  )
       pi.publish('sheet_state', stateA + stateB  )
     }
 
